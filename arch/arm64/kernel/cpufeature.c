@@ -864,7 +864,7 @@ static int __nocfi kpti_install_ng_mappings(void *__unused)
 	if (kpti_applied)
 		return 0;
 
-	remap_fn = (void *)__pa_symbol(idmap_kpti_install_ng_mappings);
+	remap_fn = (void *)__pa_function(idmap_kpti_install_ng_mappings);
 
 	scs_save(current);
 
